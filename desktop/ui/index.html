@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Home</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; display: flex; gap: 20px; }
+        .column { flex: 1; border: 1px solid #ccc; padding: 15px; border-radius: 8px; }
+        button { cursor: pointer; padding: 5px 10px; margin-bottom: 10px; }
+        input { padding: 5px; margin-right: 5px; }
+        ul { list-style: none; padding: 0; }
+        li { padding: 5px 0; border-bottom: 1px solid #eee; cursor: pointer; }
+        li:hover { background: #f0f0f0; }
+        .error { color: red; margin-top: 10px; }
+        #report { white-space: pre-wrap; background: #f9f9f9; padding: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="column">
+    <h2>Комнаты</h2>
+    <div>
+        <input type="text" id="new-room-name" placeholder="Имя комнаты">
+        <button id="btn-add-room">Добавить</button>
+        <button id="btn-load-rooms">Обновить</button>
+    </div>
+    <ul id="rooms-list"></ul>
+</div>
+
+<div class="column">
+    <h2>Устройства</h2>
+    <div id="devices-header">Выберите комнату</div>
+    <div>
+        <input type="text" id="new-device-name" placeholder="Имя устройства">
+        <select id="new-device-kind">
+            <option value="socket">Розетка</option>
+            <option value="thermometer">Термометр</option>
+        </select>
+        <button id="btn-add-device">Добавить</button>
+    </div>
+    <ul id="devices-list"></ul>
+</div>
+
+<div class="column">
+    <h2>Отчёт</h2>
+    <button id="btn-report">Запросить отчёт</button>
+    <pre id="report">Нет данных</pre>
+    <div id="error" class="error"></div>
+</div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
