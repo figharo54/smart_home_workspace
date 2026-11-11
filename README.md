@@ -77,7 +77,7 @@ kind — "socket" или "thermometer".
    - Подробнее: https://tauri.app/start/prerequisites/
    
 ## Запуск backend
-cargo run -p smart-home-backend
+    cargo run -p smart-home-backend
 
 Ожидаемый вывод:
 
